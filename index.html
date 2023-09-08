@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>AddrMiner</title>
+    <link rel='stylesheet' href='static/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body class="hero-anime">
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand nav-link" href="#" style="font-weight: bold;">AddrMiner</a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation"><span
+                                class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#hitlist-a">IPv6 Hitlist</a>
+                                </li>
+
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"><a class="nav-link dropdown-toggle"
+                                        data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                        aria-expanded="false">Software and Tools</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#addrm_s-a">AddrMiner-S</a>
+                                        <a class="dropdown-item" href="#addrm_n-a">AddrMiner-N</a>
+                                        <a class="dropdown-item" href="#det-a">DET</a>
+                                        <a class="dropdown-item" href="#fapd-a">FAPD</a>
+                                        <a class="dropdown-item" href="#random-bytes-a">Random-Bytes</a>
+                                        <a class="dropdown-item" href="#gen_opti-a">Gen-optimization</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"><a class="nav-link dropdown-toggle"
+                                        data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                                        aria-expanded="false">Paper</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#uatc2022-a">Usenix ATC 2022</a>
+                                        <a class="dropdown-item" href="#tntw2022-a">T-NTW 2022</a>
+                                        <a class="dropdown-item" href="#iwqos2022-a">IWQoS 2020</a>
+                                    </div>
+                                </li>
+
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#contact-a">Contact</a>
+                                </li>
+
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="#partners-a">Partners</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="position: relative;margin-top:100px;">
+
+        <h2>Introdution</h2>
+        <b>AddrMiner: </b> a systematic and comprehensive global active IPv6 address probing system. 
+
+        <br>
+
+        AddrMiner divides the IPv6 address space regions into three kinds according to the number of seed addresses to
+        discover active IPv6 addresses from scratch, from few to many. AddrMiner would like to further open the door of
+        IPv6 measurement studies by publicly releasing AddrMiner and sharing our data.
+
+        <br>
+        <br>
+
+        <div style="text-align: center;">
+            <img src="static\image\Overview.png" alt="Overview"  style="max-width: 100%; height: auto;"/>
+        </div>
+
+        <div style="text-align: center;font-size: 14px;">
+            The System Architecture of AddrMiner
+        </div>
+
+        <br>
+
+        Our latest research incorporates real-world operational conditions, simplifies the system architecture, and divides it into two scenarios (seeded address scenarios and seedless address scenarios). Our latest research will be made public soon.
+
+        <div id="hitlist-a" style="position: absolute;"></div>
+        <h2 id="hitlist">Our IPv6 Hitlist collection process</h2>
+        We continuously monitor globally active IPv6 addresses. The growth curve of our IPv6 hitlist is depicted in the graph
+        below. The activity of IPv6 addresses exhibits a temporal nature, meaning that an address may be active at one moment
+        and not be used in the next. Our project focuses on identifying consistently active IPv6 addresses, so we monitor the
+        activity of collected active IPv6 addresses daily. To maintain the availability of our IPv6 hitlist (with high
+        activity), we regularly remove long-term inactive IPv6 addresses. For instance, on November 1, 2022, we cleaned our
+        historical data collection by removing over one billion long-term inactive IPv6 addresses. We provide an IPv6 Hitlist
+        service to provide active IPv6 addresses to interested researchers.
+        <br>
+
+        <div id="chart_g" style="color: #000;"></div>
+
+
+        <h4>Openly Accessible Service</h4>
+        <ul>
+            <li>
+                Active address (responsive address) list:
+                <ul>
+                    <li>
+                        <a href="">Active address list</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Referencing the Hitlist Service</h4>
+
+        If you are using data from Our IPv6 Hitlist in your publication, please refer to it with the following
+        references(Addrminer <a href="http://144.24.79.94:8080/s/grc77e">[bib]</a>, DET <a href="http://144.24.79.94:8080/s/x8lenx">[bib]</a>, and SongTowards <a href="http://144.24.79.94:8080/s/2ihwly">[bib]</a>):
+
+        <br>
+
+        <small>
+            <code>        
+        @inproceedings{Addrminer,<br>
+            &nbsp;&nbsp;    title={$\{$AddrMiner$\}$: A Comprehensive Global Active $\{$IPv6$\}$ Address Discovery System},<br>
+            &nbsp;&nbsp;    author={Song, Guanglei and Yang, Jiahai and He, Lin and Wang, Zhiliang and Li, Guo and Duan, Chenxin and Liu, Yaozhong and Sun, Zhongxiang},<br>
+            &nbsp;&nbsp;    booktitle={2022 USENIX Annual Technical Conference (USENIX ATC 22)},<br>
+            &nbsp;&nbsp;    pages={309--326},<br>
+            &nbsp;&nbsp;    year={2022}<br>
+        }
+            </code>
+        </small>
+        <br>
+        <small>
+            <code>
+        @article{DET,<br>
+            &nbsp;&nbsp;    title={Det: Enabling efficient probing of ipv6 active addresses},<br>
+            &nbsp;&nbsp;    author={Song, Guanglei and Yang, Jiahai and Wang, Zhiliang and He, Lin and Lin, Jinlei and Pan, Long and Duan, Chenxin and Quan, Xiaowen},<br>
+            &nbsp;&nbsp;    journal={IEEE/ACM Transactions on Networking},<br>
+            &nbsp;&nbsp;    volume={30},<br>
+            &nbsp;&nbsp;    number={4},<br>
+            &nbsp;&nbsp;    pages={1629--1643},<br>
+            &nbsp;&nbsp;    year={2022},<br>
+            &nbsp;&nbsp;    publisher={IEEE}<br>
+        }
+            </code>
+        </small>
+        <br>
+        <small>
+            <code>
+        @inproceedings{SongTowards,<br>
+            &nbsp;&nbsp;    title={Towards the construction of global IPv6 hitlist and efficient probing of IPv6 address space},<br>
+            &nbsp;&nbsp;    author={Song, Guanglei and He, Lin and Wang, Zhiliang and Yang, Jiahai and Jin, Tao and Liu, Jieling and Li, Guo},<br>
+            &nbsp;&nbsp;    booktitle={2020 IEEE/ACM 28th International Symposium on Quality of Service (IWQoS)},<br>
+            &nbsp;&nbsp;    pages={1--10},<br>
+            &nbsp;&nbsp;    year={2020},<br>
+            &nbsp;&nbsp;    organization={IEEE}<br>
+        }
+            </code>
+        </small>
+
+        <div id="tools-a" style="position: absolute;"></div>
+        <h2 id="tools">Software and Tools</h2>
+
+        We publish the following software and tools for use by the scientific community:
+        <br>
+        <div id="addrm_s-a" style="position: absolute;"></div>
+        <h4 id="addrm_s">AddrMiner-v2.0</h4>
+
+        AddrMiner-v2.0: is an improved global active IPv6 address detection system based on AddrMiner-v1.0. The specific improvements encompass
+        two aspects: on the one hand, it simplifies the address detection architecture by dividing address detection into two
+        detection scenarios, making it more practical for deployment. On the other hand, it introduces a multi-level association
+        policy (MLAP) to enhance further the coverage and resource utilization of seedless regional detection.
+
+        <br>
+
+        Source: <a href="https://github.com/AddrMiner/AddrMiner-v2.0">github.com/AddrMiner/AddrMiner-v2.0</a>
+
+        <div id="addrm_n-a" style="position: absolute;"></div>
+        <h4 id="addrm_n">AddrMiner-v1.0</h4>
+
+        AddrMiner-v1.0: is a systematic, comprehensive, and efficient active IPv6 address detection system. It divides address detection into
+        three scenarios: seedless address scenario, few seeded address scenario, and sufficient seeded address scenario.
+
+        <br>
+
+        Source: <a href="https://github.com/AddrMiner/AddrMiner-v1.0">github.com/AddrMiner/AddrMiner-v1.0</a>
+
+        <div id="det-a" style="position: absolute;"></div>
+        <h4 id="det">DET</h4>
+
+        DET is an abbreviation for detective. It is an efficient IPv6 address discovery method that combines density, information entropy, and spatial tree.
+
+        <br>
+
+        Source: <a href="https://github.com/sixiangdeweicao/DET">github.com/sixiangdeweicao/DET</a>
+
+        <div id="fapd-a" style="position: absolute;"></div>
+        <h4 id="fapd">FAPD</h4>
+
+        FAPD: is a fingerprint-based method to detect aliased prefixes.
+
+        <br>
+
+        Source: <a
+            href="https://github.com/sixiangdeweicao/Aliased_prefixs_TBT">github.com/sixiangdeweicao/Aliased_prefixs_TBT</a>
+
+
+        <div id="random-bytes-a" style="position: absolute;"></div>
+        <h4 id="random-bytes">Random-Bytes</h4>
+
+        Random-Bytes: is a method to generate target addresses under each BGP prefix based on a common pattern of observation. 
+
+        <br>
+
+        Source: <a href="https://github.com/sixiangdeweicao/Random-Bytes">github.com/sixiangdeweicao/Random-Bytes</a>
+
+        <div id="gen_opti-a" style="position: absolute;"></div>
+        <h4 id="gen_opti">Gen-optimization</h4>
+
+        Gen-optimization: An optimized version of 6Gen, which discovers seed address high-density areas in linear time and detects active IPv6 addresses in high-density regions.
+
+        <br>
+
+        Source: <a href="https://github.com/sixiangdeweicao/6Gen-optimization">github.com/sixiangdeweicao/6Gen-optimization</a>
+
+        <div id="uatc2022-a" style="position: absolute;"></div>
+        <h2 id="uatc2022">AddrMiner: A Comprehensive Global Active IPv6 Address Discovery System</h2>
+
+        <b> Abstract.</b>
+        Fast Internet-wide scanning is essential for network situational awareness and asset evaluation. However, the
+        vast IPv6 address space makes brute-force scanning infeasible. Although state-of-the-art techniques have made
+        effective attempts, these methods do not work in seedless regions, while the detection efficiency is low in
+        regions with seeds. Moreover, the constructed hitlist with low coverage cannot truly represent the active IPv6
+        address landscape of the Internet.
+        <br>
+        This paper introduces AddrMiner, a global active IPv6 address probing system, making IPv6 active address probing
+        systematic, comprehensive, and economical. We divide the IPv6 address space regions into three kinds according
+        to the number of seed addresses and propose a probing algorithm for each of them. For the regions with no seeds,
+        we propose AddrMiner-N, leveraging an organization association strategy to mine active addresses. It finds
+        active addresses covering 86.4K BGP prefixes, accounting for 81.6% of the probed BGP prefixes. For the regions
+        with few seeds, we propose AddrMiner-F, utilizing a similarity matching strategy to probe active addresses
+        further. The hit rate of active address probing is improved by 70%-150% compared to existing algorithms. For the
+        regions with sufficient seeds, we propose AddrMiner-S to generate target addresses based on reinforcement
+        learning dynamically. It nearly doubles the hit rate compared to the state-of-the-art algorithms. Finally, we
+        deploy AddrMiner and discover 2.1 billion active IPv6 addresses, including 1.7 billion de-aliased active
+        addresses and 0.4 billion aliased addresses, through continuous probing for 13 months. We would like to further
+        open the door of IPv6 measurement studies by publicly releasing AddrMiner and sharing our data.
+        <br>
+        <b>Paper. </b> Read the final version of our paper here: <b><a
+                href="http://144.24.79.94:8080/s/h7ixhw">[PDF]</a></b>
+        <br>
+
+        <b>Authors.</b>
+        <a href="https://scholar.google.com/citations?user=dpcpsXQAAAAJ&hl=zh-CN&oi=ao">Guanglei Song</a>
+        , Jiahai Yang, Lin He, Zhiliang Wang, Guo Li, Chenxin Duan, Yaozhong Liu, Zhongxiang Sun
+        <br>
+        <b>Published in: </b><a href="https://www.usenix.org/conference/atc22/presentation/song">Usenix ATC 2022</a>
+
+        <div id="tntw2022-a" style="position: absolute;"></div>
+        <h2 id="tntw2022">Det: Enabling efficient probing of ipv6 active addresses</h2>
+
+        <b> Abstract.</b>
+        Fast IPv4 scanning significantly improves network measurement and security research. Nevertheless, it is
+        infeasible to perform brute-force scanning of the IPv6 address space. Alternatively, one can find active IPv6
+        addresses through scanning the candidate addresses generated by state-of-the-art algorithms. However, the
+        probing efficiency of such algorithms is often very low. In this paper, our objective is to improve the probing
+        efficiency of IPv6 addresses. We first perform a longitudinal active measurement study and build a high-quality
+        dataset, hitlist, including more than 1.95B IPv6 addresses distributed in 58.2K BGP prefixes and collected over
+        17 months period. Different from the previous works, we probe the announced BGP prefixes using a pattern-based
+        algorithm. This results in a dataset without uneven address distribution and low active rates. Further, we
+        propose an efficient address generation algorithm, DET, which builds a density space tree to learn high-density
+        address regions of the seed addresses with linear time complexity and improves the active addresses' probing
+        efficiency. We then compare our algorithm DET against state-of-the-art algorithms on the public hitlist and our
+        hitlist by scanning 50M addresses. Our analysis shows that DET increases the de-aliased active address ratio and
+        active address (including aliased addresses) ratio by 10%, and 14%, respectively. Furthermore, we develop a
+        fingerprint-based method to detect aliased prefixes. The proposed method for the first time directly verifies
+        whether the prefix is aliased or not. Our method finds that 10.64% of the public aliased prefixes are false
+        positive.
+        <br>
+        <b>Paper. </b> Read the final version of our paper here: <b><a
+                href="http://144.24.79.94:8080/s/sb4iji">[PDF]</a></b>
+        <br>
+
+        <b>Authors.</b>
+        <a href="https://scholar.google.com/citations?user=dpcpsXQAAAAJ&hl=zh-CN&oi=ao">Guanglei Song</a>
+        , Jiahai Yang,
+        Zhiliang Wang,
+        Lin He,
+        Jinlei Lin,
+        Long Pan,
+        Chenxin Duan,
+        Xiaowen Quan.
+        <br>
+        <b>Published in: </b><a href="https://ieeexplore.ieee.org/document/9698406">IEEE/ACM Transactions
+            on Networking</a> ( Volume: 30, <a
+            href="https://ieeexplore.ieee.org/xpl/tocresult.jsp?isnumber=9859542&punumber=90">Issue: 4</a>, August 2022)
+
+        <div id="iwqos2022-a" style="position: absolute;"></div>
+        <h2 id="iwqos2022">Towards the construction of global IPv6 hitlist and efficient probing of IPv6 address space
+        </h2>
+
+        <b> Abstract.</b>
+        Fast IPv4 scanning has made sufficient progress in network measurement and security research. However, it is
+        infeasible to perform brute-force scanning of the IPv6 address space. We can find active IPv6 addresses through
+        scanning candidate addresses generated by the state-of-the-art algorithms, whose probing efficiency of active
+        IPv6 addresses, however, is still very low. In this paper, we aim to improve the probing efficiency of IPv6
+        addresses in two ways. Firstly, we perform a longitudinal active measurement study over four months, building a
+        high-quality dataset called hitlist with more than 1.3 billion IPv6 addresses distributed in 45.2k BGP prefixes.
+        Different from previous work, we probe the announced BGP prefixes using a pattern-based algorithm, which makes
+        our dataset overcome the problems of uneven address distribution and low active rate. Secondly, we propose an
+        efficient address generation algorithm DET, which builds a density space tree to learn high-density address
+        regions of the seed addresses in linear time and improves the probing efficiency of active addresses. On the
+        public hitlist and our hitlist, we compare our algorithm DET against state-of-the-art algorithms and find that
+        DET increases the de-aliased active address ratio by 10%, and active address (including aliased addresses) ratio
+        by 14%, by scanning 50 million addresses.
+        <br>
+        <b>Paper. </b> Read the final version of our paper here: <b><a
+                href="http://144.24.79.94:8080/s/wbjgn5">[PDF]</a></b>
+        <br>
+
+        <b>Authors.</b>
+        <a href="https://scholar.google.com/citations?user=dpcpsXQAAAAJ&hl=zh-CN&oi=ao">Guanglei Song</a>
+        , Lin He,
+        Zhiliang Wang,
+        Jiahai Yang,
+        Tao Jin,
+        Jieling Liu,
+        Guo Li.
+        <br>
+        <b>Published in: </b><a href="https://ieeexplore.ieee.org/document/9212980">2020 IEEE/ACM 28th
+            International Symposium on Quality of Service (IWQoS)</a>
+
+
+
+        <div id="contact-a" style="position: absolute;"></div>
+        <h2 id="contact">Contact</h2>
+        <b><a href="https://scholar.google.com/citations?user=dpcpsXQAAAAJ&hl=zh-CN&oi=ao">Guanglei Song</a></b>: <a
+            href="mailto:sgl18@mails.tsinghua.edu.cn">sgl18@mails.tsinghua.edu.cn</a>
+            <br>
+            In order to support IPv6 network-related research, we provide more data about hitlist(active IPv6 addresses) and address fingerprint information. If you want more data, you can send a request to <a
+            href="mailto:sgl18@mails.tsinghua.edu.cn">sgl18@mails.tsinghua.edu.cn</a>. The request should include the work department, the purpose of data usage, and the data content obtained.
+
+        <div id="partners-a" style="position: absolute;"></div>
+        <h2 id="partners">Partners</h2>
+        <br>
+    
+        <img src="static\image\tsing.png" alt="Tsinghua University" style="width: 180px;height: 180px;">
+    
+    </div> 
+    <div class="my-5 py-5"></div>
+</body>
+<script src='static/js/jquery.min.js'></script>
+<script src='static/js/bootstrap.min.js'></script>
+<script src="static/js/script.js"></script>
+<script src="static/js/script2.js"></script>
+<script src="static/js/apexcharts.min.js"></script>
+
+</html>
